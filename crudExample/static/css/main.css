@@ -1,0 +1,24 @@
+body {
+    background-color: #292c33;
+    color: #6c7079;
+}
+.img-flag-logo{
+    width: 30px;
+    height: 30px;
+}
+.card-player {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    background: #ddd;
+}
+.card-player .list-group .list-group-item {
+    background: none;
+}
+
+.nav-item .nav-link {
+    color: #ffffff !important;
+}
+
+.nav-item .nav-link:hover {
+    color: #dda32b !important;
+}

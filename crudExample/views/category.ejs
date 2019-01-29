@@ -1,0 +1,48 @@
+<% layout('layouts/main') -%>
+
+<div class="container" style="margin-top:80px;">
+    <div class="row">
+        <div class="col">
+            <a href="/categories/index" class="btn btn-primary">Volver</a>
+        </div>
+    </div>
+    <div class="row"> 
+        <div class="col-4">
+            <div class="card card-player" style="width: 18rem;">
+                    <img src="<%= category.imageUrl %>" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title"><img class="img-flag-logo" src="/static/images/SAS.jpg" width="30" height="30"> Special Air Service</h5>
+                            <p class="card-text"><%= category.summary %> </p>
+                        </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><a href="https://rainbowsix.fandom.com/es/wiki/Sledge" class="card-link">Seamus "Sledge" Cowden</a></li>
+                                <li class="list-group-item"><a href="https://rainbowsix.fandom.com/es/wiki/Mute" class="card-link">Mark "Mute" Chandar</a></li>
+                                <li class="list-group-item"><a href="https://rainbowsix.fandom.com/es/wiki/Smoke" class="card-link">James "Smoke" Porter</a></li>
+                                <li class="list-group-item"><a href="https://rainbowsix.fandom.com/es/wiki/Thatcher" class="card-link">Mike "Thatcher" Baker</a></li>
+                            </ul>
+                    <div class="card-body">
+                        <a href="https://es.wikipedia.org/wiki/Servicio_A%C3%A9reo_Especial" class="card-link">Conoce mas</a>
+                    </div>
+                </div>
+            </div>
+        
+        <div class="col-8">
+            <h2 style=color:rgb(151,131,49)><%= category.name %></h2>
+            <p style="color:ghostwhite"><%= category.description %></p>
+             
+            <div class="card card-player" style="width: 40rem;">
+                <div class="card-header">
+                  <h4><img class="img-flag-logo" src="<%= category.imageUrl %>"><%= category.division %></h4>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><h6>Activa </h6><%= category.period %></li>
+                  <li class="list-group-item"><h6>Pais</h6> <img class="img-flag-logo" src="/static/images/SAS.jpg" > <%= category.country %></li>
+                  <li class="list-group-item"><h6>Rama</h6><%= category.branch %></li>
+                  <li class="list-group-item"><h6>Tipo</h6> Fuerzas especiales</li>
+                  <li class="list-group-item"><h6>Funcion</h6><%= category.function %></li>
+                  <li class="list-group-item"><h6>Parte de</h6> Fuerzas Especiales del Reino Unido</li>
+                </ul>
+            </div>
+        </div>     
+    </div>
+</div>

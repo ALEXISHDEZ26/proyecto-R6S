@@ -1,0 +1,33 @@
+<% layout('layouts/main') -%>
+
+<h1>Catgorias</h1> 
+<div class="cointainer">
+<div class="row">
+
+ <% for(var i=0; i<categories.length; i++) {%>
+  <div class="col-md-4"> 
+    <div class="card" style="width: 18rem;">
+        <img src="<%= categories[i].imageUrl %>" class="card-img-top" alt="<%= categories[i].name %>">
+        <div class="card-body">
+            <h5 class="card-title"><%= categories[i].name %></h5>
+          <p class="card-text"><%= categories[i].description %></p>
+          <a href='/categories/<%= categories[i]._id %>'>Ver</a>
+        </div>
+      </div>
+    </div> 
+ <% } %>
+</div>
+</div>
+
+
+<form action="/categories" method="POST">
+  <input type="text" placeholder="name" name="nombre">
+  <select name="pais" id="pais">
+      <option value="Mexico">Mexico</option>
+      <option value="USA">USA</option>
+      <option value="Francia">Francia</option>
+      <option value="China">China</option>
+  </select>
+  <input type="textarea" placeholder="descripcion" name="descripcion">
+  <button type="submit">Submit</button>
+</form>
